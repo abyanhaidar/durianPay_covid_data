@@ -1,4 +1,4 @@
-import twilio from 'twilio';
+const twilio = require('twilio');
 const rp = require('request-promise');
 require('dotenv').config();
 twilio(process.env.TWILIO_SID, process.env.TWILIO_KEY);
@@ -78,6 +78,6 @@ function covidData(req, res, next) {
 };
 
 
-export default {
+module.exports = {
     covidData
 };
